@@ -1,0 +1,45 @@
+- name: get core auth-tokens
+  set_fact:
+    core_tokens: "{{ lookup('file', '{{ core_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[].token')}}"
+- debug:
+    msg: "{{ core_tokens[0] }}"
+
+- name: get controller_token for api token
+  get_randomstr:
+    length: 32
+  register: controller_token32
+
+- name: get kibana_name for api token
+  get_randomstr:
+    length: 8
+  register: kibana_name8
+
+- name: get zaico_name for api token
+  get_randomstr:
+    length: 8
+  register: zaico_name8
+
+- name: get robotui_name for api token
+  get_randomstr:
+    length: 8
+  register: robotui_name8
+
+- name: get kibana_pass for api token
+  get_randomstr:
+    length: 16
+  register: kibana_pass16
+
+- name: get zaico_pass for api token
+  get_randomstr:
+    length: 16
+  register: zaico_pass16
+
+- name: get robotui_pass for api token
+  get_randomstr:
+    length: 16
+  register: robotui_pass16
+
+- name: generate secrets/auth-tokens.json
+  template:
+    src: minikube_auth-tokens.json.j2
+    dest: "{{ root_dir }}/secrets/auth-tokens.json"
