@@ -6,7 +6,9 @@ core_dir: "{{ inventory_dir }}/../../../../core"
 containers:
   controller:
     image: roboticbase/uoa-poc2-controller:0.1.0
-
+  robotui:
+    image: roboticbase/uoa-poc2-robotui:0.1.0
+    
 mqtt:
   users:
     - name: iotagent

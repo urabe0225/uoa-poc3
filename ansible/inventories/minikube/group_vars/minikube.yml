@@ -22,3 +22,5 @@ nat:
 containers_extra:
   controller:
     replicas: 2
+  robotui:
+    replicas: 2

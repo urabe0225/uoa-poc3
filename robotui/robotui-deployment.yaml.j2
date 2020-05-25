@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robotui
+spec:
+  replicas: {{ containers_extra.robotui.replicas }}
+  selector:
+    matchLabels:
+      app: robotui
+  template:
+    metadata:
+      labels:
+        app: robotui
+    spec:
+      containers:
+      - name: robotui
+        image: {{ containers.robotui.image }}
+        imagePullPolicy: Always
+        ports:
+          - name: robotui
+            containerPort: 80
