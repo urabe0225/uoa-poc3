@@ -2,3 +2,34 @@
 root_dir: "{{ inventory_dir }}/../../.."
 
 core_dir: "{{ inventory_dir }}/../../../../core"
+
+containers:
+  controller:
+    image: roboticbase/uoa-poc2-controller:0.1.0
+
+mqtt:
+  users:
+    - name: iotagent
+      password: password_of_iotagent # change password of iotagent
+    - name: ros
+      password: password_of_ros # change password of iotagent
+    - name: ui
+      password: password_of_ui # change password of iotagent
+
+fiware:
+  service: uoa_poc3
+  delivery_robot:
+    service_path: /delivery_robot
+    type: delivery_robot
+    id:
+      - delivery_robot_01
+      - delivery_robot_02
+  robot_ui:
+    service_path: /robot_ui
+    type: robot_ui
+    id:
+      - robotui_01
+      - robotui_02
+  token:
+    service_path: /token
+    type: token

@@ -18,3 +18,7 @@ nat:
   mqtt: 1883
   web_mqtt: 15675
   http: 8080
+
+containers_extra:
+  controller:
+    replicas: 2

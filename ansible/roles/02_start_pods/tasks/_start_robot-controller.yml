@@ -1,0 +1,38 @@
+- name: start robot-controller service
+  k8s:
+    state: present
+    namespace: default
+    src: "{{ root_dir }}/controller/robot-controller-{{ ansible_play_name }}-service.yaml"
+
+- name: check robot-controller service
+  k8s_info:
+    kind: Service
+    name: robot-controller
+    namespace: default
+    label_selectors:
+      - app = robot-controller
+  register: controller_services_result
+  until: controller_services_result.resources | length == 1
+  retries: 6
+  delay: 10
+
+
+- name: start robot-controller deployment
+  k8s:
+    state: present
+    namespace: default
+    definition: "{{ lookup('template', '{{ root_dir }}/controller/robot-controller-deployment.yaml.j2') }}"
+
+- name: check robot-controller deployment
+  k8s_info:
+    kind: Deployment
+    name: robot-controller
+    namespace: default
+  register: controller_deployment_result
+  until:
+    - controller_deployment_result.resources | length == 1
+    - controller_deployment_result.resources[0].status is defined
+    - controller_deployment_result.resources[0].status.readyReplicas is defined
+    - controller_deployment_result.resources[0].status.readyReplicas == containers_extra.controller.replicas
+  retries: 60
+  delay: 10

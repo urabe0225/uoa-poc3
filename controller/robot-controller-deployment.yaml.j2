@@ -1,0 +1,43 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: robot-controller
+spec:
+  replicas: {{ containers_extra.controller.replicas }}
+  selector:
+    matchLabels:
+      app: robot-controller
+  template:
+    metadata:
+      labels:
+        app: robot-controller
+    spec:
+      containers:
+      - name: robot-controller
+        image: {{ containers.controller.image }}
+        imagePullPolicy: Always
+        env:
+        - name: LOG_LEVEL
+          value: "INFO"
+        - name: LISTEN_PORT
+          value: "3000"
+        - name: TIMEZONE
+          value: "Asia/Tokyo"
+        - name: ORION_ENDPOINT
+          value: "http://orion:1026"
+        - name: FIWARE_SERVICE
+          value: {{ fiware.service }}
+        - name: DELIVERY_ROBOT_SERVICEPATH
+          value: {{ fiware.delivery_robot.service_path }}
+        - name: DELIVERY_ROBOT_TYPE
+          value: {{ fiware.delivery_robot.type }}
+        - name: DELIVERY_ROBOT_LIST
+          value: '[{{ fiware.delivery_robot.id[0] }}, {{ fiware.delivery_robot.id[1] }}]'
+        - name: ROBOT_UI_SERVICEPATH
+          value: {{ fiware.robot_ui.service_path }}
+        - name: ROBOT_UI_TYPE
+          value: {{ fiware.robot_ui.type }}
+        - name: ID_TABLE
+          value: '{ {{ fiware.delivery_robot.id[0] }}:{{ fiware.robot_ui.id[0] }}, {{ fiware.delivery_robot.id[1] }}:{{ fiware.robot_ui.id[1] }} }'
+        - name: CORS_ORIGINS
+          value: "*"
