@@ -36,6 +36,11 @@ fiware:
     service_path: /token
     type: token
 
+path_tokens:
+  - id: token_a
+  - id: token_b
+  - id: token_c
+
 subscriptions:
   delibery_robot:
     -
@@ -74,3 +79,3014 @@ subscriptions:
       - send_token_info
       - send_token_info_status
       - send_token_info_info
+  robot_controller:
+    -
+      condition:
+        - mode
+      notification:
+        - mode
+        - time
+places:
+  -
+    id: place_A
+    name: 受付前
+    pose:
+      point:
+        x: 0.0
+        y: 0.0
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_B
+    name: 中央経由地点1
+    pose:
+      point:
+        x: -1.50
+        y: -1.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_C
+    name: エレベータ前
+    pose:
+      point:
+        x: -1.38
+        y: 4.97
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_D
+    name: 玄関
+    pose:
+      point:
+        x: -4.98
+        y: -1.51
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 3.12
+  -
+    id: place_E
+    name: カフェ前1
+    pose:
+      point:
+        x: -1.66
+        y: -6.68
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.97
+  -
+    id: place_F
+    name: 倉庫2前経由地
+    pose:
+      point:
+        x: 0.20
+        y: -8.10
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 2.3
+  -
+    id: place_G
+    name: 倉庫2
+    pose:
+      point:
+        x: 1.71
+        y: -9.70
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_H
+    name: 会議室3前経由地
+    pose:
+      point:
+        x: 6.06
+        y: -8.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_Hdash
+    name: 会議室3
+    pose:
+      point:
+        x: 5.96
+        y: -9.09
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_I
+    name: 会議室2前経由地
+    pose:
+      point:
+        x: 9.56
+        y: -8.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_Idash
+    name: 会議室2
+    pose:
+      point:
+        x: 9.43
+        y: -9.10
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_J
+    name: 会議室1前経由地
+    pose:
+      point:
+        x: 10.60
+        y: -8.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_Jdash
+    name: 会議室1
+    pose:
+      point:
+        x: 10.73
+        y: -9.08
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_K
+    name: ホワイトボードルーム
+    pose:
+      point:
+        x: 13.49
+        y: -7.90
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_L
+    name: 倉庫1
+    pose:
+      point:
+        x: 6.0
+        y: -1.99
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 3.14
+  -
+    id: place_M
+    name: LICTiA倉庫
+    pose:
+      point:
+        x: 8.77
+        y: -1.97
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_N
+    name: セキュリティルーム
+    pose:
+      point:
+        x: 10.84
+        y: -1.87
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_O
+    name: トイレ前
+    pose:
+      point:
+        x: 13.78
+        y: -1.89
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_P
+    name: 裏口
+    pose:
+      point:
+        x: 14.80
+        y: -1.90
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_Q
+    name: 待機場所1
+    pose:
+      point:
+        x: -0.10
+        y: 0.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_R
+    name: 中央経由地点２
+    pose:
+      point:
+        x: 0.50
+        y: -2.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_S
+    name: カフェ前２
+    pose:
+      point:
+        x: -0.94
+        y: -5.90
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_T
+    name: 倉庫2前経由地２
+    pose:
+      point:
+        x: 1.70
+        y: -8.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_U
+    name: 一時退避場所
+    pose:
+      point:
+        x: 5.80
+        y: -7.15
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.57
+  -
+    id: place_V
+    name: 待機場所２
+    pose:
+      point:
+        x: -3.10
+        y: 0.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -0.90
+  -
+    id: place_LA
+    name: 倉庫1Token取得ポイント1
+    pose:
+      point:
+        x: -0.50
+        y: -1.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -0.46
+  -
+    id: place_RA
+    name: 倉庫1Token解放ポイント1
+    pose:
+      point:
+        x: -0.50
+        y: -2.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -1.80
+  -
+    id: place_LB
+    name: 倉庫2Token取得ポイント1
+    pose:
+      point:
+        x: 0.70
+        y: -7.40
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: -0.15
+  -
+    id: place_RB
+    name: 倉庫2Token解放ポイント1
+    pose:
+      point:
+        x: 2.30
+        y: -7.50
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.05
+  -
+    id: place_LC
+    name: 会議室Token取得ポイント
+    pose:
+      point:
+        x: 4.90
+        y: -7.30
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 0.0
+  -
+    id: place_RC
+    name: 会議室Token解放ポイント
+    pose:
+      point:
+        x: 5.00
+        y: -8.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 3.14
+  -
+    id: place_LAdash
+    name: 倉庫1Token取得ポイント2
+    pose:
+      point:
+        x: -1.50
+        y: -2.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_RAdash
+    name: 倉庫1Token解放ポイント2
+    pose:
+      point:
+        x: -1.50
+        y: -1.00
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 1.57
+  -
+    id: place_LBdash
+    name: 倉庫2Token取得ポイント2
+    pose:
+      point:
+        x: 2.60
+        y: -8.20
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 3.14
+  -
+    id: place_RBdash
+    name: 倉庫2Token解放ポイント2
+    pose:
+      point:
+        x: 0.70
+        y: -8.10
+        z: 0.0
+      angle:
+        roll: 0.0
+        pitch: 0.0
+        yaw: 3.14
+
+routes:
+  - id: route_plan_01_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_L
+    destination: place_Hdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_LB
+      via: []
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_01_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_L
+    destination: place_Hdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_LB
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_02_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_L
+    destination: place_Idash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_LB
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_02_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_L
+    destination: place_Idash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_LB
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_03_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_L
+    destination: place_Jdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_LB
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_03_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_L
+    destination: place_Jdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_LB
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_04_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G
+    destination: place_Hdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_04_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G
+    destination: place_Hdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_05_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G
+    destination: place_Idash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_05_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G
+    destination: place_Idash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_06_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G
+    destination: place_Jdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_06_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G
+    destination: place_Jdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_07_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G|place_L
+    destination: place_Hdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_07_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G|place_L
+    destination: place_Hdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Hdash
+    - from: place_LC
+      via:
+      - place_H
+      to: place_Hdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Hdash
+    - from: place_Hdash
+      via:
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_08_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G|place_L
+    destination: place_Idash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_08_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G|place_L
+    destination: place_Idash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Idash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      to: place_Idash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Idash
+    - from: place_Idash
+      via:
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_09_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G|place_L
+    destination: place_Jdash
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_09_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G|place_L
+    destination: place_Jdash
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via:
+      - place_T
+      to: place_RB
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_RB
+      via: []
+      to: place_LC
+      action:
+        func: lock
+        token: token_c
+        waiting_route:
+          via: []
+          to: place_U
+      destination: place_Jdash
+    - from: place_LC
+      via:
+      - place_H
+      - place_I
+      - place_J
+      to: place_Jdash
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Jdash
+    - from: place_Jdash
+      via:
+      - place_J
+      - place_I
+      - place_H
+      to: place_RC
+      action:
+        func: release
+        token: token_c
+        waiting_route: {}
+      destination: place_V
+    - from: place_RC
+      via: []
+      to: place_LBdash
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_LBdash
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_10_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_L
+    destination: place_G
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_10_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_L
+    destination: place_G
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LA
+      via:
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_V
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_LAdash
+      via: []
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
+  - id: route_plan_11_01
+    robot_id: delivery_robot_01
+    source: place_Q
+    via: place_G
+    destination: place_L
+    routes:
+    - from: place_Q
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_L
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LAdash
+      via:
+      - place_B
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_Q
+    - from: place_RAdash
+      via: []
+      to: place_Q
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_Q
+  - id: route_plan_11_02
+    robot_id: delivery_robot_02
+    source: place_V
+    via: place_G
+    destination: place_L
+    routes:
+    - from: place_V
+      via: []
+      to: place_LA
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_LA
+      via: []
+      to: place_RA
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_G
+    - from: place_RA
+      via:
+      - place_S
+      to: place_LB
+      action:
+        func: lock
+        token: token_b
+        waiting_route: {}
+      destination: place_G
+    - from: place_LB
+      via:
+      - place_T
+      to: place_G
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_G
+    - from: place_G
+      via: []
+      to: place_RBdash
+      action:
+        func: release
+        token: token_b
+        waiting_route: {}
+      destination: place_L
+    - from: place_RBdash
+      via:
+      - place_F
+      - place_E
+      to: place_LAdash
+      action:
+        func: lock
+        token: token_a
+        waiting_route: {}
+      destination: place_L
+    - from: place_LAdash
+      via:
+      - place_B
+      - place_R
+      to: place_L
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_L
+    - from: place_L
+      via:
+      - place_R
+      to: place_RAdash
+      action:
+        func: release
+        token: token_a
+        waiting_route: {}
+      destination: place_V
+    - from: place_RAdash
+      via: []
+      to: place_V
+      action:
+        func: ''
+        token: ''
+        waiting_route: {}
+      destination: place_V
