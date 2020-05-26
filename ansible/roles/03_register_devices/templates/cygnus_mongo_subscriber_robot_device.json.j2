@@ -5,14 +5,14 @@
       "type": "{{ fiware.delivery_robot.type }}"
     }],
     "condition": {
-      "attrs": ["current_mode", "current_state", "last_processed_time"]
+      "attrs": {{ _attrs }}
     }
   },
   "notification": {
     "http": {
       "url": "http://cygnus-mongo:5050/notify"
     },
-    "attrs": ["current_mode", "current_state", "last_processed_time"],
+    "attrs": {{ _attrs }},
     "attrsFormat": "legacy"
   }
 }

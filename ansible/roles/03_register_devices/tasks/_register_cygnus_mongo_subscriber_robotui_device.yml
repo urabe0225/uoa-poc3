@@ -1,0 +1,16 @@
+- set_fact:
+    _service_path: "{{ fiware.robot_ui.service_path }}"
+    _temp_file: cygnus_mongo_subscriber_robotui_device.json.j2
+
+- include_tasks: check_subscriber.yml
+
+- include_tasks: delete_subscriber.yml
+  with_items: "{{ check_subscriber_result.json }}"
+  loop_control:
+    loop_var: subscriber
+  when: check_subscriber_result.json | length | int > 0
+
+- include_tasks: register_subscriber.yml
+  loop: "{{ subscriptions.robot_ui }}"
+  loop_control:
+    loop_var: _attrs

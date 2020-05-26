@@ -1,18 +1,18 @@
 {
   "subject": {
     "entities": [{
-      "idPattern": "{{ fiware.delivery_robot.id_prefix }}.*",
-      "type": "{{ fiware.delivery_robot.type }}"
+      "idPattern": "{{ fiware.robot_ui.id_prefix }}.*",
+      "type": "{{ fiware.robot_ui.type }}"
     }],
     "condition": {
-      "attrs": ["caller"]
+      "attrs": {{ _attrs }}
     }
   },
   "notification": {
     "http": {
       "url": "http://cygnus-mongo:5050/notify"
     },
-    "attrs": ["caller"],
+    "attrs": {{ _attrs }},
     "attrsFormat": "legacy"
   }
 }
