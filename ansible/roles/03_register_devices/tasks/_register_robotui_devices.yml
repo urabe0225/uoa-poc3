@@ -1,9 +1,7 @@
-- name: get auth-tokens
-  set_fact:
-    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
-
 - set_fact:
     _service_path: "{{ fiware.robot_ui.service_path }}"
+    _temp_file: register_robotui_device.json.j2
+
 - include_tasks: check_devices.yml
 
 - include_tasks: delete_device.yml

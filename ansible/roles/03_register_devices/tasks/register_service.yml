@@ -1,4 +1,4 @@
-- name: register robotui service
+- name: register service
   uri:
     url: http://localhost:8080/idas/json/manage/iot/services/
     method: POST
@@ -7,5 +7,5 @@
     headers:
       Authorization: "bearer {{ tokens[0] }}"
       Fiware-Service: "{{ fiware.service }}"
-      Fiware-ServicePath: "{{ fiware.robot_ui.service_path }}"
-    body: "{{ lookup('template','register_robotui_service.json.j2') }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+    body: "{{ lookup('template', _temp_file) }}"

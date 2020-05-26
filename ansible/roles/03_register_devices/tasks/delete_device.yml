@@ -6,4 +6,4 @@
     headers:
       Authorization: "bearer {{ tokens[0] }}"
       Fiware-Service: "{{ fiware.service }}"
-      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
+      Fiware-ServicePath: "{{ _service_path }}"

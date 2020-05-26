@@ -1,4 +1,4 @@
-- name: register delivery robot device
+- name: register device
   uri:
     url: http://localhost:8080/idas/json/manage/iot/devices/
     method: POST
@@ -7,5 +7,5 @@
     headers:
       Authorization: "bearer {{ tokens[0] }}"
       Fiware-Service: "{{ fiware.service }}"
-      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
-    body: "{{ lookup('template','register_delivery_robot_device.json.j2') }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+    body: "{{ lookup('template', _temp_file) }}"

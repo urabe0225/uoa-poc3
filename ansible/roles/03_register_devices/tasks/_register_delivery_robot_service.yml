@@ -1,9 +1,7 @@
-- name: get auth-tokens
-  set_fact:
-    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
-
 - set_fact:
     _service_path: "{{ fiware.delivery_robot.service_path }}"
+    _temp_file: register_delivery_robot_service.json.j2
+    
 - include_tasks: check_services.yml
 
 - include_tasks: delete_service.yml
@@ -12,4 +10,4 @@
     loop_var: services
   when: check_service_register_result.json.count | int > 0
 
-- include_tasks: register_delivery_robot_service.yml
+- include_tasks: register_service.yml
