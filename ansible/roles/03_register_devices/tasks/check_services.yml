@@ -1,0 +1,9 @@
+- name: check services
+  uri:
+    url: http://localhost:8080/idas/json/manage/iot/services/
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+  register: check_service_register_result
