@@ -1,0 +1,24 @@
+{
+  "devices": [
+    {
+      "device_id": "{{ item }}",
+      "entity_name": "{{ item }}",
+      "entity_type": "{{ fiware.robot_ui.type }}",
+      "timezone": "Asia/Tokyo",
+      "protocol": "json",
+      "attributes": [
+      ],
+      "commands": [
+        {
+          "name": "send_state",
+          "type": "object"
+        },
+        {
+          "name": "send_token_info",
+          "type": "object"
+        }
+      ],
+      "transport": "AMQP"
+    }
+  ]
+}
