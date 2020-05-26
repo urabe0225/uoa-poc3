@@ -1,0 +1,28 @@
+{
+  "id": "{{ _route.id }}",
+  "type": "route_plan",
+  "TimeInstant": {
+    "type": "ISO8601",
+    "value": "{{ date.iso8601 }}"
+  },
+  "source": {
+    "type": "string",
+    "value": "{{ _route.source }}"
+  },
+  "destination": {
+    "type": "string",
+    "value": "{{ _route.destination }}"
+  },
+  "via": {
+    "type": "string",
+    "value": "{{ _route.via }}"
+  },
+  "routes": {
+    "type": "array",
+    "value": {{ _route.routes }}
+  },
+  "robot_id": {
+    "type": "string",
+    "value": "{{ _route.robot_id }}"
+  }
+}

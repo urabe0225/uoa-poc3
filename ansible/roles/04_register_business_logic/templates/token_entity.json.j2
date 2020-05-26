@@ -1,0 +1,20 @@
+{
+  "id": "{{ _path_token.id }}",
+  "type": "{{ fiware.token.type }}",
+  "TimeInstant": {
+    "type": "ISO8601",
+    "value": "{{ date.iso8601 }}"
+  },
+  "is_locked": {
+    "type": "boolean",
+    "value": false
+  },
+  "lock_owner_id": {
+    "type": "string",
+    "value": ""
+  },
+  "waitings": {
+    "type": "array",
+    "value": []
+  }
+}

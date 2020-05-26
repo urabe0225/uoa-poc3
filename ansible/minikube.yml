@@ -2,6 +2,8 @@
 - hosts: minikube
   connection: local
   roles:
-#    - 01_create_secret
-#    - 02_start_pods
+    - 01_create_secret
+    - 02_start_pods
     - 03_register_devices
+    - 04_register_business_logic
+    - 05_initialize

@@ -1,0 +1,18 @@
+- set_fact:
+    _service_path: "{{ fiware.token.service_path }}"
+- import_tasks: check_token_entities.yml
+
+- include_tasks: delete_entity.yml
+  with_items: "{{ check_entities_result.json }}"
+  loop_control:
+    loop_var: entity
+  when: check_entities_result.json | length | int > 0
+
+- name: get date to iso format
+  iso8601:
+  register: date
+
+- include_tasks: register_token_entity.yml
+  loop: "{{ path_tokens }}"
+  loop_control:
+    loop_var: _path_token

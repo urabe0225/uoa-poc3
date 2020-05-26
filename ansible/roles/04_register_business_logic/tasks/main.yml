@@ -1,0 +1,7 @@
+- name: get auth-tokens
+  set_fact:
+    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
+
+- import_tasks: _setup_place_entities.yml
+- import_tasks: _setup_route_entities.yml
+- import_tasks: _setup_token_entities.yml

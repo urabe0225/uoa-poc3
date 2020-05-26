@@ -1,0 +1,9 @@
+- name: check route entities
+  uri:
+    url: http://localhost:8080/orion/v2/entities/?type=route_plan&limit=1000&attrs=id
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+  register: check_entities_result
