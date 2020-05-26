@@ -1,0 +1,17 @@
+{
+  "subject": {
+    "entities": [{
+      "idPattern": "{{ fiware.delivery_robot.id_prefix }}.*",
+      "type": "{{ fiware.delivery_robot.type }}"
+    }],
+    "condition": {
+      "attrs": {{ _attrs.condition }}
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://robot-controller:3000/api/v1/robots/notifications/"
+    },
+    "attrs": {{ _attrs.notification }}
+  }
+}

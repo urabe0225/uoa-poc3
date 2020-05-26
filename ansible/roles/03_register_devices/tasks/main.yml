@@ -2,10 +2,11 @@
   set_fact:
     tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
 
-#- import_tasks: _register_users_to_rabbitmq.yml
-#- import_tasks: _register_delivery_robot_service.yml
-#- import_tasks: _register_delivery_robot_devices.yml
-#- import_tasks: _register_cygnus_mongo_subscriber_robot_device.yml
-#- import_tasks: _register_robotui_service.yml
-#- import_tasks: _register_robotui_devices.yml
+- import_tasks: _register_users_to_rabbitmq.yml
+- import_tasks: _register_delivery_robot_service.yml
+- import_tasks: _register_delivery_robot_devices.yml
+- import_tasks: _register_cygnus_mongo_subscriber_robot_device.yml
+- import_tasks: _register_robotui_service.yml
+- import_tasks: _register_robotui_devices.yml
 - import_tasks: _register_cygnus_mongo_subscriber_robotui_device.yml
+- import_tasks: _register_robot_controller_subscriber_robots.yml
