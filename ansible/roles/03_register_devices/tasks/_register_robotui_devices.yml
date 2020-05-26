@@ -3,7 +3,7 @@
     tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
 
 - set_fact:
-    _service_path: "{{ fiware.delivery_robot.service_path }}"
+    _service_path: "{{ fiware.robot_ui.service_path }}"
 - include_tasks: check_devices.yml
 
 - include_tasks: delete_device.yml
@@ -12,6 +12,5 @@
     loop_var: devices
   when: check_device_register_result.json.count | int > 0
 
-
 - include_tasks: register_device.yml
-  loop: "{{ fiware.delivery_robot.id }}"
+  loop: "{{ fiware.robot_ui.id }}"
