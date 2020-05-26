@@ -1,0 +1,4 @@
+- import_tasks: _start_robot-controller.yml
+# start zaico-extension
+- import_tasks: _start_robotui.yml
+# register DNS
