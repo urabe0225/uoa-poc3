@@ -1,0 +1,15 @@
+- name: get auth-tokens
+  set_fact:
+    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
+
+- include_tasks: check_devices.yml
+
+- include_tasks: delete_device.yml
+  with_items: "{{ check_device_register_result.json.devices }}"
+  loop_control:
+    loop_var: devices
+  when: check_device_register_result.json.count | int > 0
+
+
+- include_tasks: register_device.yml
+  loop: "{{ fiware.delivery_robot.id }}"

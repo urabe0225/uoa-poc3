@@ -1,0 +1,9 @@
+- name: delete device
+  uri:
+    url: "http://localhost:8080/idas/json/manage/iot/devices/{{ devices.device_id }}"
+    method: DELETE
+    status_code: 204
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"

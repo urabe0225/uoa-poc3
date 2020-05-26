@@ -1,0 +1,9 @@
+- name: check devices
+  uri:
+    url: http://localhost:8080/idas/json/manage/iot/devices/
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
+  register: check_device_register_result

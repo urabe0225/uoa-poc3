@@ -1,0 +1,84 @@
+{
+  "devices": [
+    {
+      "device_id": "{{ item }}",
+      "entity_name": "{{ item }}",
+      "entity_type": "{{ fiware.delivery_robot.type }}",
+      "timezone": "Asia/Tokyo",
+      "protocol": "json",
+      "attributes": [
+        {
+          "name": "time",
+          "type": "ISO8601"
+        },
+        {
+          "name": "mode",
+          "type": "string"
+        },
+        {
+          "name": "errors",
+          "type": "array"
+        },
+        {
+          "name": "pose",
+          "type": "object"
+        },
+        {
+          "name": "destination",
+          "type": "object"
+        },
+        {
+          "name": "covariance",
+          "type": "array"
+        },
+        {
+          "name": "battery",
+          "type": "object"
+        },
+        {
+          "name": "current_routes",
+          "type": "array"
+        },
+        {
+          "name": "navigating_waypoints",
+          "type": "object"
+        },
+        {
+          "name": "remaining_waypoints_list",
+          "type": "array"
+        },
+        {
+          "name": "order",
+          "type": "object"
+        },
+        {
+          "name": "current_mode",
+          "type": "string"
+        },
+        {
+          "name": "current_state",
+          "type": "string"
+        },
+        {
+          "name": "caller",
+          "type": "string"
+        },
+        {
+          "name": "last_processed_time",
+          "type": "ISO8601"
+        }
+      ],
+      "commands": [
+        {
+          "name": "send_cmd",
+          "type": "object"
+        },
+        {
+          "name": "send_emg",
+          "type": "object"
+        }
+      ],
+      "transport": "AMQP"
+    }
+  ]
+}
