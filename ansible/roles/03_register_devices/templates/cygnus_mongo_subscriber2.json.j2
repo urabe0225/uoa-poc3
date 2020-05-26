@@ -1,0 +1,18 @@
+{
+  "subject": {
+    "entities": [{
+      "idPattern": "{{ fiware.delivery_robot.id_prefix }}.*",
+      "type": "{{ fiware.delivery_robot.type }}"
+    }],
+    "condition": {
+      "attrs": ["send_cmd", "send_cmd_status", "send_cmd_info"]
+    }
+  },
+  "notification": {
+    "http": {
+      "url": "http://cygnus-mongo:5050/notify"
+    },
+    "attrs": ["send_cmd", "send_cmd_status", "send_cmd_info"],
+    "attrsFormat": "legacy"
+  }
+}

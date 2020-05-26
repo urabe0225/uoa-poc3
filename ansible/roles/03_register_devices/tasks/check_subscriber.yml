@@ -1,0 +1,9 @@
+- name: check cygnus-mongo subscriber
+  uri:
+    url: http://localhost:8080/orion/v2/subscriptions
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
+  register: check_cygnus_mongo_subscriber_result
