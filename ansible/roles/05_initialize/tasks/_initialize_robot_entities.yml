@@ -1,0 +1,17 @@
+- debug:
+    msg: "{{ lookup('template', 'init_robot_entity.json.j2') }}"
+
+- name: initialize robot entity
+  uri:
+    url: "http://localhost:8080/orion/v2/entities/{{ _id }}/attrs?type={{ fiware.delivery_robot.type }}"
+    method: PATCH
+    body_format: json
+    status_code: 204
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
+    body: "{{ lookup('template', 'init_robot_entity.json.j2') }}"
+  loop: "{{ fiware.delivery_robot.id }}"
+  loop_control:
+    loop_var: _id

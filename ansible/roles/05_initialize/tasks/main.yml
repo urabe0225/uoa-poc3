@@ -1,0 +1,16 @@
+- name: get auth-tokens
+  set_fact:
+    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
+
+- import_tasks: _initialize_robot_entities.yml
+- import_tasks: _initialize_token_entities.yml
+
+###  start uoa_poc3_bridge
+- name: confirm
+  pause: prompt="Press Enter key when uoa_poc3_bridge is launched."
+
+
+- include_tasks: _initialize_position_phisical_robots.yml
+  loop: "{{ fiware.delivery_robot.id }}"
+  loop_control:
+    loop_var: _id

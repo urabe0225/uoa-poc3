@@ -1,0 +1,17 @@
+- debug:
+    msg: "{{ lookup('template', 'init_token_entity.json.j2') }}"
+
+- name: initialize token entity
+  uri:
+    url: "http://localhost:8080/orion/v2/entities/{{ _id.id }}/attrs?type={{ fiware.token.type }}"
+    method: PATCH
+    body_format: json
+    status_code: 204
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.token.service_path }}"
+    body: "{{ lookup('template', 'init_token_entity.json.j2') }}"
+  loop: "{{ path_tokens }}"
+  loop_control:
+    loop_var: _id
