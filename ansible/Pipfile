@@ -13,8 +13,8 @@ netifaces = "~=0.10"
 docker = "~=4.2"
 pyyaml = "~=5.3"
 openshift = "~=0.10"
-mosquitto
-paho-mqtt
+mosquitto = "*"
+paho-mqtt = "*"
 
 [requires]
 python_version = "3.7"

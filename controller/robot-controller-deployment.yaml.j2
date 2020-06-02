@@ -32,12 +32,35 @@ spec:
         - name: DELIVERY_ROBOT_TYPE
           value: {{ fiware.delivery_robot.type }}
         - name: DELIVERY_ROBOT_LIST
-          value: '[{{ fiware.delivery_robot.id[0] }}, {{ fiware.delivery_robot.id[1] }}]'
+          value: '[ "{{ fiware.delivery_robot.id[0] }}", "{{ fiware.delivery_robot.id[1] }}"]'
         - name: ROBOT_UI_SERVICEPATH
           value: {{ fiware.robot_ui.service_path }}
         - name: ROBOT_UI_TYPE
           value: {{ fiware.robot_ui.type }}
         - name: ID_TABLE
-          value: '{ {{ fiware.delivery_robot.id[0] }}:{{ fiware.robot_ui.id[0] }}, {{ fiware.delivery_robot.id[1] }}:{{ fiware.robot_ui.id[1] }} }'
+          value: '{ "{{ fiware.delivery_robot.id[0] }}":"{{ fiware.robot_ui.id[0] }}", "{{ fiware.delivery_robot.id[1] }}":"{{ fiware.robot_ui.id[1] }}" }'
         - name: CORS_ORIGINS
           value: "*"
+        - name: TOKEN_SERVICEPATH
+          value: {{ fiware.token.service_path }}
+        - name: TOKEN_TYPE
+          value: {{ fiware.token.type }}
+        - name: MOVENEXT_WAIT_MSEC
+          value: "500"
+        - name: MOVENEXT_WAIT_MAX_NUM
+          value: "40"
+        - name: NOTIFICATION_THROTTLING_MSEC
+          value: "250"
+        - name: MONGODB_HOST
+          value: "mongodb-client"
+        - name: MONGODB_PORT
+          value: "27017"
+        - name: MONGODB_REPLICASET
+          value: "rs0"
+        - name: MONGODB_DB_NAME
+          value: "robot_controller"
+        - name: MONGODB_COLLECTION_NAME
+          value: "delivery_robot_lock"
+        ports:
+          - name: r-controller
+            containerPort: 3000
