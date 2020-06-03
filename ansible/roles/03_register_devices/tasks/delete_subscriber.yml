@@ -1,6 +1,6 @@
 - name: delete cygnus-mongo subscriber
   uri:
-    url: "http://localhost:8080/orion/v2/subscriptions/{{ subscriber.id }}"
+    url: ""{{ url.orion.subscriptions }}"{{ subscriber.id }}"
     method: DELETE
     status_code: 204
     headers:

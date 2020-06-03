@@ -1,6 +1,6 @@
 - name: check devices
   uri:
-    url: http://localhost:8080/idas/json/manage/iot/devices/
+    url: "{{ url.idas.devices }}"
     method: GET
     headers:
       Authorization: "bearer {{ tokens[0] }}"

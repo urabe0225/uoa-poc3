@@ -1,0 +1,27 @@
+- import_role:
+    name: 00_common
+    tasks_from: login_azure.yml
+    
+- import_tasks: _check_existing_auth_token.yml
+
+- debug:
+    msg: "{{ existing_auth_tokens_secret }}"
+- debug:
+    msg: "{{ auth_tokens_secret_result.resources }}"
+
+
+- import_tasks: _delete_auth_tokens_secret.yml
+  when: existing_auth_tokens_secret | int == 1
+
+- import_tasks: _check_existing_auth_token.yml
+
+- debug:
+    msg: "{{ existing_auth_tokens_secret }}"
+
+- include_tasks: _create_{{ ansible_play_name }}_auth_tokens.yml
+  when: existing_auth_tokens_secret | int == 0
+- import_tasks: _create_auth_token_secret.yml
+  when: existing_auth_tokens_secret | int == 0
+
+- debug:
+    msg: "{{ existing_auth_tokens_secret }}"

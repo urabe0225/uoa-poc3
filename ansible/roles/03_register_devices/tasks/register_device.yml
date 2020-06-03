@@ -1,6 +1,6 @@
 - name: register device
   uri:
-    url: http://localhost:8080/idas/json/manage/iot/devices/
+    url: "{{ url.idas.devices }}"
     method: POST
     body_format: json
     status_code: 201

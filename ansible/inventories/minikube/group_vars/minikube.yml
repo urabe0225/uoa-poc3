@@ -24,3 +24,13 @@ containers_extra:
     replicas: 2
   robotui:
     replicas: 2
+
+endpoint: http://localhost:8080
+mqtt_endpoint: localhost
+url:
+  orion:
+    entities: "{{ endpoint }}/orion/v2/entities/"
+    subscriptions: "{{ endpoint }}/orion/v2/subscriptions/"
+  idas:
+    services: "{{ endpoint }}/idas/json/manage/iot/services/"
+    devices: "{{ endpoint }}/idas/json/manage/iot/devices/"

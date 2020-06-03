@@ -3,7 +3,7 @@
 
 - name: initialize robot entity
   uri:
-    url: "http://localhost:8080/orion/v2/entities/{{ _id }}/attrs?type={{ fiware.delivery_robot.type }}"
+    url: "{{ url.orion.entities }}{{ _id }}/attrs?type={{ fiware.delivery_robot.type }}"
     method: PATCH
     body_format: json
     status_code: 204

@@ -1,6 +1,6 @@
 - name: check place entities
   uri:
-    url: http://localhost:8080/orion/v2/entities/?type=place&limit=1000&attrs=id
+    url: "{{ url.orion.entities }}?type=place&limit=1000&attrs=id"
     method: GET
     headers:
       Authorization: "bearer {{ tokens[0] }}"

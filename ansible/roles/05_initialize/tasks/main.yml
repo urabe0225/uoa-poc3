@@ -9,8 +9,7 @@
 - name: confirm
   pause: prompt="Press Enter key when uoa_poc3_bridge is launched."
 
-
-- include_tasks: _initialize_position_phisical_robots.yml
+- include_tasks: _initialize_position_phisical_robots_{{ ansible_play_name }}.yml
   loop: "{{ fiware.delivery_robot.id }}"
   loop_control:
     loop_var: _id

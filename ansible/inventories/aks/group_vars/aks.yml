@@ -1,1 +1,23 @@
+---
+envfile_path: "{{ inventory_dir  }}/../../../docs/environments/minikube/env"
 
+nat:
+  mqtt: 8883
+  web_mqtt: 15675
+  http: 8080
+
+containers_extra:
+  controller:
+    replicas: 2
+  robotui:
+    replicas: 2
+
+endpoint: https://api.cloudconductor.jp
+mqtt_endpoint: mqtt.cloudconductor.jp
+url:
+  orion:
+    entities: "{{ endpoint }}/orion/v2/entities/"
+    subscriptions: "{{ endpoint }}/orion/v2/subscriptions/"
+  idas:
+    services: "{{ endpoint }}/idas/json/manage/iot/services/"
+    devices: "{{ endpoint }}/idas/json/manage/iot/devices/"

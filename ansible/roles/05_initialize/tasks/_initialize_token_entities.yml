@@ -3,7 +3,7 @@
 
 - name: initialize token entity
   uri:
-    url: "http://localhost:8080/orion/v2/entities/{{ _id.id }}/attrs?type={{ fiware.token.type }}"
+    url: "{{ url.orion.entities }}{{ _id.id }}/attrs?type={{ fiware.token.type }}"
     method: PATCH
     body_format: json
     status_code: 204

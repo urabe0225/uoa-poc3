@@ -1,6 +1,6 @@
 - name: delete device
   uri:
-    url: "http://localhost:8080/idas/json/manage/iot/devices/{{ devices.device_id }}"
+    url: "{{ url.idas.devices }}{{ devices.device_id }}"
     method: DELETE
     status_code: 204
     headers:

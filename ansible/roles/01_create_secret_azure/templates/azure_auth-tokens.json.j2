@@ -1,0 +1,97 @@
+[
+  {
+    "host": "api\\..+$",
+    "settings": {
+      "bearer_tokens": [
+        {
+          "token": "{{ core_tokens[0] }}",
+          "allowed_paths": [
+            "^/orion/.*$",
+            "^/idas/.*$",
+            "^/comet/.*$"
+          ]
+        },
+        {
+          "token": "{{ controller_token32.randomstr }}",
+          "allowed_paths": [
+            "^/controller/.*$"
+          ]
+        }
+      ],
+      "basic_auths": [],
+      "no_auths": {
+        "allowed_paths": []
+      }
+    }
+  },
+  {
+    "host": "kibana\\..+$",
+    "settings": {
+      "bearer_tokens": [],
+      "basic_auths": [
+        {
+          "username": "{{ kibana_name8.randomstr }}",
+          "password": "{{ kibana_pass16.randomstr }}",
+          "allowed_paths": [
+            "^.*$"
+          ]
+        }
+      ],
+      "no_auths": {
+        "allowed_paths": []
+      }
+    }
+  },
+  {
+    "host": "grafana\\..+$",
+    "settings": {
+      "bearer_tokens": [],
+      "basic_auths": [],
+      "no_auths": {
+        "allowed_paths": [
+          "^.*$"
+        ]
+      }
+    }
+  },
+  {
+    "host": "zaico\\..+$",
+    "settings": {
+      "bearer_tokens": [],
+      "basic_auths": [
+        {
+          "username": "{{ zaico_name8.randomstr }}",
+          "password": "{{ zaico_pass16.randomstr }}",
+          "allowed_paths": [
+            "^.*$"
+          ]
+        }
+      ],
+      "no_auths": {
+        "allowed_paths": [
+          "^.*/static/.*$"
+        ]
+      }
+    }
+  },
+  {
+    "host": "robotui\\..+$",
+    "settings": {
+      "bearer_tokens": [],
+      "basic_auths": [
+        {
+          "username": "{{ robotui_name8.randomstr }}",
+          "password": "{{ robotui_pass16.randomstr }}",
+          "allowed_paths": [
+            "^.*$"
+          ]
+        }
+      ],
+      "no_auths": {
+        "allowed_paths": [
+          "^.*/static/.*$"
+        ]
+      }
+    }
+  }
+]

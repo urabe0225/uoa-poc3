@@ -1,0 +1,18 @@
+- name: get date to iso format
+  iso8601:
+  register: date
+
+- name: send mqtt message
+  mqtt:
+    server: "{{ mqtt_endpoint }}"
+    topic: "/delivery_robot/{{ _id }}/cmd"
+    ca_cert: "{{ root_dir }}/secrets/DST_Root_CA_X3.pem"
+    username: "{{ mqtt.users[0].name }}"
+    password:  "{{ mqtt.users[0].password }}"
+    payload: "{\"send_cmd\":{\"time\":\"1970-01-01T09:00:00+09:00\",\"cmd\":\"navi\",\"waypoints\":[{\"point\":{\"x\":-0.1,\"y\":0.5,\"z\":0},\"angle\":{\"roll\":0,\"pitch\":0,\"yaw\":-1.57}}]}}"
+    qos: 0
+    port: "{{ nat.mqtt }}"
+  delegate_to: "{{ mqtt_endpoint }}"
+
+- name: confirm
+  pause: prompt="Press Enter key when the robot is reached."

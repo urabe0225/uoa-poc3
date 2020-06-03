@@ -3,7 +3,7 @@
 
 - name: register place entity
   uri:
-    url: http://localhost:8080/orion/v2/entities/
+    url: "{{ url.orion.entities }}"
     method: POST
     body_format: json
     status_code: 201

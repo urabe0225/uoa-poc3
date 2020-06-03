@@ -1,6 +1,6 @@
 - name: check subscriber
   uri:
-    url: http://localhost:8080/orion/v2/subscriptions
+    url: "{{ url.orion.subscriptions }}"
     method: GET
     headers:
       Authorization: "bearer {{ tokens[0] }}"

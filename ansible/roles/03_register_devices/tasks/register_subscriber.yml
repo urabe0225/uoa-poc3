@@ -1,6 +1,6 @@
 - name: register subscriber
   uri:
-    url: http://localhost:8080/orion/v2/subscriptions/
+    url: "{{ url.orion.subscriptions }}"
     method: POST
     body_format: json
     status_code: 201

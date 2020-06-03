@@ -1,6 +1,6 @@
 - name: check services
   uri:
-    url: http://localhost:8080/idas/json/manage/iot/services/
+    url: "{{ url.idas.services }}"
     method: GET
     headers:
       Authorization: "bearer {{ tokens[0] }}"

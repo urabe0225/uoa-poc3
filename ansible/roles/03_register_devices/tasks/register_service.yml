@@ -1,6 +1,6 @@
 - name: register service
   uri:
-    url: http://localhost:8080/idas/json/manage/iot/services/
+    url: "{{ url.idas.services }}"
     method: POST
     body_format: json
     status_code: 201

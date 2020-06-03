@@ -1,6 +1,6 @@
 - name: delete entity
   uri:
-    url: "http://localhost:8080/orion/v2/entities/{{ entity.id }}"
+    url: "{{ url.orion.entities }}{{ entity.id }}"
     method: DELETE
     status_code: 204
     headers:
