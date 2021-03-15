@@ -1,0 +1,11 @@
+- name: register service
+  uri:
+    url: http://localhost:8080/idas/json/manage/iot/services/
+    method: POST
+    body_format: json
+    status_code: 201
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+    body: "{{ lookup('template', _temp_file) }}"

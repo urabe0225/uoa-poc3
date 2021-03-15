@@ -1,0 +1,13 @@
+- set_fact:
+    _service_path: "{{ fiware.delivery_robot.service_path }}"
+    _temp_file: register_delivery_robot_service.json.j2
+    
+- include_tasks: check_services.yml
+
+- include_tasks: delete_service.yml
+  with_items: "{{ check_service_register_result.json.services }}"
+  loop_control:
+    loop_var: services
+  when: check_service_register_result.json.count | int > 0
+
+- include_tasks: register_service.yml

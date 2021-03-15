@@ -1,7 +1,7 @@
 ---
 root_dir: "{{ inventory_dir }}/../../.."
 
-core_dir: "{{ inventory_dir }}/../../../../core"
+core_dir: "{{ inventory_dir }}/../../../../../core"
 
 containers:
   controller:

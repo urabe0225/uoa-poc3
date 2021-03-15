@@ -1,0 +1,9 @@
+- name: check subscriber
+  uri:
+    url: http://localhost:8080/orion/v2/subscriptions
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"
+  register: check_subscriber_result

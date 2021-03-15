@@ -1,0 +1,2 @@
+- debug:
+    msg: '[ "{{ fiware.delivery_robot.id[0] }}", "{{ fiware.delivery_robot.id[1] }}"]'

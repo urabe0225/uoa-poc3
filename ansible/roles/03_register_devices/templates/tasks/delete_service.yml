@@ -1,0 +1,9 @@
+- name: delete service
+  uri:
+    url: "http://localhost:8080/idas/json/manage/iot/services?resource={{ services.resource }}&apikey={{ services.apikey }}"
+    method: DELETE
+    status_code: 204
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"

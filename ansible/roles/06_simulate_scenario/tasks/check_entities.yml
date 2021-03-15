@@ -1,0 +1,9 @@
+- name: check entities
+  uri:
+    url: "http://localhost:8080/orion/v2/entities/{{ _id }}/?attrs=send_cmd_status,current_routes,navigating_waypoints,remaining_waypoints_list"
+    method: GET
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ fiware.delivery_robot.service_path }}"
+  register: check_entities_result

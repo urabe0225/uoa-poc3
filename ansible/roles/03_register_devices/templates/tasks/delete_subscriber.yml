@@ -1,0 +1,9 @@
+- name: delete cygnus-mongo subscriber
+  uri:
+    url: "http://localhost:8080/orion/v2/subscriptions/{{ subscriber.id }}"
+    method: DELETE
+    status_code: 204
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+      Fiware-Service: "{{ fiware.service }}"
+      Fiware-ServicePath: "{{ _service_path }}"

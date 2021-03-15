@@ -1,0 +1,12 @@
+- debug:
+    msg: "{{ lookup('template', 'ship_an_item.json.j2') }}"
+
+- name: ship an item to a destination
+  uri:
+    url: http://localhost:8080/controller/api/v1/shipments/
+    method: POST
+    body_format: json
+    status_code: 504
+    headers:
+      Authorization: "bearer {{ tokens[0] }}"
+    body: "{{ lookup('template', 'ship_an_item.json.j2') }}"

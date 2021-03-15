@@ -1,0 +1,9 @@
+- name: get randomstr
+  get_randomstr:
+    length: 32
+  register: get_randomstr_result
+
+- include_tasks: __add_rabbitmq_user.yml
+  with_items: "{{ mqtt.users }}"
+  loop_control:
+    loop_var: user

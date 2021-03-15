@@ -1,0 +1,8 @@
+- set_fact:
+    _service_path: "{{ fiware.delivery_robot.service_path }}"
+    _temp_file: robot_controller_subscriber_robots.json.j2
+
+- include_tasks: register_subscriber.yml
+  loop: "{{ subscriptions.robot_controller }}"
+  loop_control:
+    loop_var: _attrs

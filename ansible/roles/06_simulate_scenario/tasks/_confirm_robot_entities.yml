@@ -1,0 +1,8 @@
+- name: get auth-tokens
+  set_fact:
+    tokens: "{{ lookup('file', '{{ root_dir }}/secrets/auth-tokens.json') | from_json | json_query('[].settings.bearer_tokens[0].token')}}"
+
+- include_tasks: check_entities.yml
+  loop: "{{ fiware.delivery_robot.id }}"
+  loop_control:
+    loop_var: _id
